@@ -22,8 +22,15 @@ with open(csvpath, newline="") as csvfile:
     # Skip over the first line --> Headers
     csvheader = next(csvreader)
     row = next(csvreader)
-    
-    previousrow = int(row[1])
 
-    print(previousrow)
+    # Calculating initial variables
+    previousrow = int(row[1])
+    tmonth = tmonth + 1
+    tnet = tnet + previousrow
+    gincrease = previousrow
+    gincreasemonth = str(row[0])
+                         
+    
+    
+
     

@@ -13,3 +13,13 @@ gincreasemonth = 0
 gdecrease = 0
 gdecreasemonth = 0
 
+# Setting reading function
+with open(csvpath, newline="") as csvfile:
+
+    # Setting reading function with delimiters
+    csvreader = csv.reader(csvfile, delimiter=",")
+
+    # Skip over the first line --> Headers
+    csvheader = next(csvreader)
+    row = next(csvreader)
+    

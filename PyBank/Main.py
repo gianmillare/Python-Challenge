@@ -23,3 +23,7 @@ with open(csvpath, newline="") as csvfile:
     csvheader = next(csvreader)
     row = next(csvreader)
     
+    previousrow = int(row[1])
+
+    print(previousrow)
+    

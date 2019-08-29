@@ -29,6 +29,23 @@ with open(csvpath, newline="") as csvfile:
     tnet = tnet + previousrow
     gincrease = previousrow
     gincreasemonth = str(row[0])
+
+    for row in csvreader:
+    
+        # Begin reading each row
+        revenuechange = int(row[1]) - previousrow
+        nextmonth = []
+        nextmonth.append(revenuechange)
+        previousrow = int(row[1])
+        monthcount = []
+        monthcount.append(row[0])
+
+        print(monthcount, '\n')
+        print(revenuechange,  '\n')
+        
+
+
+    
                          
     
     

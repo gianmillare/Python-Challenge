@@ -70,7 +70,19 @@ print(f"Average Change = ${average}")
 print(f"Greatest Increase in Profits = {gincreasemonth} (${revenuemax})")
 print(f"Greatest Decrease in Profits = {gdecreasemonth} (${revenuemin})")
 
+# Write New Text File
+
+output_file = os.path.join('budget_data_revised.csv')
+
+with open(output_file, 'w') as txtfile:
     
+    txtfile.write(f"Financial Analysis\n")
+    txtfile.write(f"------------------\n")
+    txtfile.write(f"Total Months ,{tmonth}\n")
+    txtfile.write(f"Total ,${tnet}\n")
+    txtfile.write(f"Average Change ,${average}\n")
+    txtfile.write(f"Greatest Increase in Profits , {gincreasemonth} (${revenuemax})\n")
+    txtfile.write(f"Greatest Decrease in Profits , {gdecreasemonth} (${revenuemin})\n")    
                          
     
     

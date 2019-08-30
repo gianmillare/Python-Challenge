@@ -38,10 +38,10 @@ with open(csvpath,newline='') as csvfile:
             otooley = otooley + 1
 
     # Calculate the percentage of votes for each candidate
-    pkhan = khan/total_votes
-    pcorrey = correy/total_votes
-    pli = li/total_votes
-    potooley = otooley/total_votes
+    pkhan = round((khan/total_votes)*100, 2)
+    pcorrey = round((correy/total_votes)*100, 2)
+    pli = round((li/total_votes)*100, 2)
+    potooley = round((otooley/total_votes)*100, 2)
 
     # Define the winner using Max function
     winner = max(khan, correy, li, otooley)
@@ -60,10 +60,10 @@ print(f"Election Results")
 print(f"----------------")
 print(f"Total Votes = {total_votes}")
 print(f"----------------")
-print(f"Khan = {pkhan} ({khan})")
-print(f"Correy = {pcorrey} ({correy})")
-print(f"Li = {pli} ({li})")
-print(f"O'Tooley = {potooley} ({otooley})")
+print(f"Khan = {pkhan}% ({khan})")
+print(f"Correy = {pcorrey}% ({correy})")
+print(f"Li = {pli}% ({li})")
+print(f"O'Tooley = {potooley}% ({otooley})")
 print(f"----------------")
 print(f"{dictator}")
 print(f"----------------")
@@ -75,10 +75,10 @@ output_file = os.path.join('election_data_revised.csv')
 with open(output_file, 'w') as txtfile:
     txtfile.write(f"Election Results\n")
     txtfile.write(f"Total Votes , {total_votes}\n")
-    txtfile.write(f"Khan , {pkhan} ,{khan}\n")
-    txtfile.write(f"Correy , {pcorrey}, {correy}\n")
-    txtfile.write(f"Li , {pli}, {li}\n")
-    txtfile.write(f"O'Tooley , {potooley} ,{otooley}\n")
+    txtfile.write(f"Khan , {pkhan}% ,{khan}\n")
+    txtfile.write(f"Correy , {pcorrey}%, {correy}\n")
+    txtfile.write(f"Li , {pli}%, {li}\n")
+    txtfile.write(f"O'Tooley , {potooley}% ,{otooley}\n")
     txtfile.write(f"----------------\n")
     txtfile.write(f"{dictator}\n")
 

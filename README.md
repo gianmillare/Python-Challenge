@@ -1,2 +1,8 @@
-# Python-Challenge
-This project is dubbed "Py Me Up, Charlie". Utilizing Python programming, this project is divided into two parts: PyBank and PyPoll.
+# Project Preview
+# READING AND ANALYZING DATA WITH PYTHON
+
+![](Images/pythonpreview1.png)
+
+![](Images/pythonpreview2.png)
+
+![](Images/pythonpreview3.png)

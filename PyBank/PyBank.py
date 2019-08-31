@@ -71,8 +71,8 @@ with open(csvpath, newline="") as csvfile:
     
         txtfile.write(f"Financial Analysis\n")
         txtfile.write(f"------------------\n")
-        txtfile.write(f"Total Months ,{tmonth}\n")
-        txtfile.write(f"Total ,${tnet}\n")
-        txtfile.write(f"Average Change ,${average}\n")
-        txtfile.write(f"Greatest Increase in Profits , {gincreasemonth} (${revenuemax})\n")
-        txtfile.write(f"Greatest Decrease in Profits , {gdecreasemonth} (${revenuemin})\n")    
+        txtfile.write(f"Total Months = {tmonth}\n")
+        txtfile.write(f"Total =  ${tnet}.00\n")
+        txtfile.write(f"Average Change = ${roundedaverage}\n")
+        txtfile.write(f"Greatest Increase in Profits = {gincreasemonth} (${revenuemax}.00)\n")
+        txtfile.write(f"Greatest Decrease in Profits = {gdecreasemonth} (${revenuemin}.00)\n")    

@@ -4,30 +4,22 @@ import csv
 
 # Set path for the file
 csvpath = os.path.join('Resources','election_data.csv')
-
-# Set Variables
-total_votes = 0
-khan = 0
-correy = 0
-li = 0
-otooley = 0
-
-# Open and read the csv file
 with open(csvpath,newline='') as csvfile:
-
-    # Separate using delimiters
     csvreader = csv.reader(csvfile,delimiter=',')
-
-    # Skip over the headers
     csv_header = next(csvfile)
+    
+    # Set Variables
+    total_votes = 0
+    khan = 0
+    correy = 0
+    li = 0
+    otooley = 0
 
     # Create the For Loop
     for row in csvreader:
 
-        # Count the total number of votes
         total_votes = total_votes + 1
 
-        # Count total number of votes for each candidate
         if (row[2] == "Khan"):
             khan = khan + 1
         elif (row[2] == "Correy"):
@@ -69,7 +61,7 @@ print(f"{dictator}")
 print(f"----------------")
 
 # Create output file
-output_file = os.path.join('election_data_revised.csv')
+output_file = os.path.join('Analysis.csv')
 
 # Open the output file
 with open(output_file, 'w') as txtfile:
